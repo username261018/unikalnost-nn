@@ -20,8 +20,8 @@
     }, { passive: true });
   }
 
-  /* pinned card tilts with the pointer, harder while the button is held */
-  var pin = document.getElementById('pin');
+  /* the work photo tilts with the pointer, harder while the button is held */
+  var pin = document.getElementById('snap');
   if (pin && fine.matches && !still.matches) {
     var held = false, lx = 0, ly = 0;
     function tilt() {
@@ -49,16 +49,16 @@
     rise.forEach(function (el) { io.observe(el); });
   }
 
-  /* reviews carousel: buttons, dots, keyboard, swipe */
-  var box = document.getElementById('carousel');
-  if (box) {
+  /* photo carousels: buttons, dots, keyboard, swipe */
+  document.querySelectorAll('.carousel').forEach(function (box) {
     var track = box.querySelector('.carousel__track');
     var slides = box.querySelectorAll('.slide');
     var prev = box.querySelector('.arrow--prev');
     var next = box.querySelector('.arrow--next');
     var dots = box.querySelectorAll('.dots__b');
+    var count = box.querySelector('.count');
     var index = 0;
-    function perView() { return window.matchMedia('(min-width: 900px)').matches ? 2 : 1; }
+    function perView() { return Math.max(1, Math.round(parseFloat(getComputedStyle(box).getPropertyValue('--per')) || 1)); }
     function last() { return Math.max(0, slides.length - perView()); }
     function go(i) {
       index = Math.max(0, Math.min(last(), i));
@@ -66,10 +66,11 @@
       track.style.transform = 'translateX(' + (-index * step) + 'px)';
       prev.disabled = index === 0;
       next.disabled = index === last();
+      box.setAttribute('data-index', String(index));
+      if (count) count.textContent = (index + 1) + ' / ' + slides.length;
       dots.forEach(function (d, n) {
-        var shown = n >= index && n < index + perView();
-        d.setAttribute('aria-current', shown ? 'true' : 'false');
-        d.hidden = n > last() && perView() > 1 ? true : false;
+        d.hidden = n > last();
+        if (n === index) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current');
       });
       slides.forEach(function (s, n) {
         var vis = n >= index && n < index + perView();
@@ -94,7 +95,7 @@
     }, { passive: true });
     window.addEventListener('resize', function () { go(index); });
     go(0);
-  }
+  });
 
   /* map loads on click */
   var open = document.querySelector('.mapbox__open');

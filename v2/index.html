@@ -36,6 +36,7 @@
       <nav class="anchors" aria-label="Разделы">
         <a href="#about">О студии</a>
         <a href="#services">Услуги</a>
+        <a href="#gallery">Галерея</a>
         <a href="#reviews">Отзывы</a>
         <a href="#contacts">Как нас найти</a>
       </nav>
@@ -47,6 +48,7 @@
     <nav class="drawer" id="drawer" aria-label="Меню" hidden>
       <a href="#about">О студии</a>
       <a href="#services">Услуги</a>
+      <a href="#gallery">Галерея</a>
       <a href="#reviews">Отзывы</a>
       <a href="#contacts">Как нас найти</a>
     </nav>
@@ -67,12 +69,9 @@
         </div>
       </div>
       <div class="first__pin">
-        <div class="pin" id="pin">
-          <p class="pin__title">Как нас найти</p>
-          <p>Нижний Новгород, Большая Покровская ул., 52, первый этаж. До м. Горьковская – 390 м.</p>
-          <p>Ежедневно с 9:00 до 21:00, по предварительной записи.</p>
-          <p class="pin__tel"><a href="tel:+79696268866">+7 (969) 626-88-66</a></p>
-        </div>
+        <figure class="snap" id="snap">
+          <img src="../img/work-07.webp" alt="Короткий бордовый маникюр" width="675" height="1200" fetchpriority="high" decoding="async">
+        </figure>
       </div>
       <ul class="facts">
           <li>Команда из четырёх мастеров, бровист-лешмейкер с опытом 10 лет</li>
@@ -123,48 +122,124 @@
     </div>
   </section>
 
+  <section class="block gallery" id="gallery" aria-labelledby="gallery-title">
+    <div class="frame">
+      <h2 id="gallery-title">Галерея</h2>
+      <div class="gallery__group">
+        <h3 id="gallery-works">Работы</h3>
+        <div class="carousel carousel--photos" id="carousel-works" role="region" aria-roledescription="карусель" aria-labelledby="gallery-works" tabindex="0">
+          <div class="carousel__view">
+            <ul class="carousel__track">
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="1 из 6">
+              <figure class="shot"><img src="../img/work-02.webp" alt="Молочный перламутровый маникюр, короткий квадрат" width="900" height="1200" loading="lazy" decoding="async"></figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="2 из 6">
+              <figure class="shot"><img src="../img/work-04.webp" alt="Длинный квадрат в нюдово-бежевом оттенке" width="675" height="1200" loading="lazy" decoding="async"></figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="3 из 6">
+              <figure class="shot"><img src="../img/work-05.webp" alt="Градиент от розового к жёлтому крупным планом" width="675" height="1200" loading="lazy" decoding="async"></figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="4 из 6">
+              <figure class="shot"><img src="../img/work-06.webp" alt="Пудрово-розовый и оливковый френч" width="675" height="1200" loading="lazy" decoding="async"></figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="5 из 6">
+              <figure class="shot"><img src="../img/work-08.webp" alt="Нюдовый маникюр с тонким жёлтым френчем" width="675" height="1200" loading="lazy" decoding="async"></figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="6 из 6">
+              <figure class="shot"><img src="../img/work-11.webp" alt="Бледно-розовый маникюр с блёстками" width="675" height="1200" loading="lazy" decoding="async"></figure>
+            </li>
+            </ul>
+          </div>
+          <div class="carousel__nav">
+            <button type="button" class="arrow arrow--prev" aria-label="Предыдущее фото"><span aria-hidden="true">←</span></button>
+            <div class="dots">
+            <button type="button" class="dots__b" aria-label="Фото 1"></button>
+            <button type="button" class="dots__b" aria-label="Фото 2"></button>
+            <button type="button" class="dots__b" aria-label="Фото 3"></button>
+            <button type="button" class="dots__b" aria-label="Фото 4"></button>
+            <button type="button" class="dots__b" aria-label="Фото 5"></button>
+            <button type="button" class="dots__b" aria-label="Фото 6"></button>
+            </div>
+            <p class="count" aria-live="polite"></p>
+            <button type="button" class="arrow arrow--next" aria-label="Следующее фото"><span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__group">
+        <h3 id="gallery-place">Интерьер</h3>
+        <div class="carousel carousel--photos" id="carousel-place" role="region" aria-roledescription="карусель" aria-labelledby="gallery-place" tabindex="0">
+          <div class="carousel__view">
+            <ul class="carousel__track">
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="1 из 9">
+              <figure class="shot"><img src="../img/interior-01.webp" alt="Зал студии: маникюрный стол, кремовые кресла и большие окна" width="1200" height="800" loading="lazy" decoding="async"></figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="2 из 9">
+              <figure class="shot"><img src="../img/interior-02.webp" alt="Маникюрный стол с лампой и палитрами оттенков" width="675" height="1200" loading="lazy" decoding="async"></figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="3 из 9">
+              <figure class="shot"><img src="../img/interior-03.webp" alt="Белая волнистая стена со стеклянными шарами, цветами и свечами" width="675" height="1200" loading="lazy" decoding="async"></figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="4 из 9">
+              <figure class="shot"><img src="../img/interior-04.webp" alt="Зелёные бархатные кресла и осенний букет" width="675" height="1200" loading="lazy" decoding="async"></figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="5 из 9">
+              <figure class="shot"><img src="../img/interior-05.webp" alt="Шары со свечами, гипсовые бюсты и полка с коробками студии" width="675" height="1200" loading="lazy" decoding="async"></figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="6 из 9">
+              <figure class="shot"><img src="../img/interior-06.webp" alt="Ваза-бюст с кленовыми листьями на приставном столике" width="675" height="1200" loading="lazy" decoding="async"></figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="7 из 9">
+              <figure class="shot"><img src="../img/interior-07.webp" alt="Уголок с зелёным бархатным стулом и подвесными лампами" width="675" height="1200" loading="lazy" decoding="async"></figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="8 из 9">
+              <figure class="shot"><img src="../img/interior-08.webp" alt="Педикюрное кресло с пледом у шалфейно-зелёной стены" width="675" height="1200" loading="lazy" decoding="async"></figure>
+            </li>
+            <li class="slide" role="group" aria-roledescription="слайд" aria-label="9 из 9">
+              <figure class="shot"><img src="../img/interior-09.webp" alt="Осенний букет с тыквами в плетёной корзине" width="675" height="1200" loading="lazy" decoding="async"></figure>
+            </li>
+            </ul>
+          </div>
+          <div class="carousel__nav">
+            <button type="button" class="arrow arrow--prev" aria-label="Предыдущее фото"><span aria-hidden="true">←</span></button>
+            <div class="dots">
+            <button type="button" class="dots__b" aria-label="Фото 1"></button>
+            <button type="button" class="dots__b" aria-label="Фото 2"></button>
+            <button type="button" class="dots__b" aria-label="Фото 3"></button>
+            <button type="button" class="dots__b" aria-label="Фото 4"></button>
+            <button type="button" class="dots__b" aria-label="Фото 5"></button>
+            <button type="button" class="dots__b" aria-label="Фото 6"></button>
+            <button type="button" class="dots__b" aria-label="Фото 7"></button>
+            <button type="button" class="dots__b" aria-label="Фото 8"></button>
+            <button type="button" class="dots__b" aria-label="Фото 9"></button>
+            </div>
+            <p class="count" aria-live="polite"></p>
+            <button type="button" class="arrow arrow--next" aria-label="Следующее фото"><span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="block reviews" id="reviews" aria-labelledby="reviews-title">
     <div class="frame">
       <h2 id="reviews-title">Что говорят наши гости</h2>
-      <div class="carousel" id="carousel" role="region" aria-roledescription="карусель" aria-label="Что говорят наши гости" tabindex="0">
-        <div class="carousel__view">
-          <ul class="carousel__track">
-          <li class="slide" role="group" aria-roledescription="слайд" aria-label="1 из 4">
-            <figure class="note">
-              <blockquote><p>«спасибо огромное! все замечательно, очень понравились ноготочки, приятная атмосфера и мастер! ❤️»</p></blockquote>
-              <figcaption>Арина, 20 октября 2026</figcaption>
-            </figure>
-          </li>
-          <li class="slide" role="group" aria-roledescription="слайд" aria-label="2 из 4">
-            <figure class="note">
-              <blockquote><p>«Хожу к мастеру Екатерине уже не первый раз, очень нравится к ней ходить, делает очень красиво, впервые встречаю такого мастера, который настолько аккуратно делает маникюр, спасибо большое❤️❤️»</p></blockquote>
-              <figcaption>Карина, 20 октября 2026</figcaption>
-            </figure>
-          </li>
-          <li class="slide" role="group" aria-roledescription="слайд" aria-label="3 из 4">
-            <figure class="note">
-              <blockquote><p>«Мастер золото !»</p></blockquote>
-              <figcaption>Алина, 19 октября 2026</figcaption>
-            </figure>
-          </li>
-          <li class="slide" role="group" aria-roledescription="слайд" aria-label="4 из 4">
-            <figure class="note">
-              <blockquote><p>«Катя прекрасный мастер! Все аккуратно, тщательно, внимательно. Человек относится с любовью к своему делу.»</p></blockquote>
-              <figcaption>Дарья, 18 октября 2026</figcaption>
-            </figure>
-          </li>
-          </ul>
-        </div>
-        <div class="carousel__nav">
-          <button type="button" class="arrow arrow--prev" aria-label="Предыдущий отзыв"><span aria-hidden="true">←</span></button>
-          <div class="dots">
-          <button type="button" class="dots__b" aria-label="Отзыв 1"></button>
-          <button type="button" class="dots__b" aria-label="Отзыв 2"></button>
-          <button type="button" class="dots__b" aria-label="Отзыв 3"></button>
-          <button type="button" class="dots__b" aria-label="Отзыв 4"></button>
-          </div>
-          <button type="button" class="arrow arrow--next" aria-label="Следующий отзыв"><span aria-hidden="true">→</span></button>
-        </div>
+      <div class="notes">
+        <figure class="note">
+          <blockquote><p>«спасибо огромное! все замечательно, очень понравились ноготочки, приятная атмосфера и мастер! ❤️»</p></blockquote>
+          <figcaption>Арина, 20 октября 2026</figcaption>
+        </figure>
+        <figure class="note">
+          <blockquote><p>«Хожу к мастеру Екатерине уже не первый раз, очень нравится к ней ходить, делает очень красиво, впервые встречаю такого мастера, который настолько аккуратно делает маникюр, спасибо большое❤️❤️»</p></blockquote>
+          <figcaption>Карина, 20 октября 2026</figcaption>
+        </figure>
+        <figure class="note">
+          <blockquote><p>«Мастер золото !»</p></blockquote>
+          <figcaption>Алина, 19 октября 2026</figcaption>
+        </figure>
+        <figure class="note">
+          <blockquote><p>«Катя прекрасный мастер! Все аккуратно, тщательно, внимательно. Человек относится с любовью к своему делу.»</p></blockquote>
+          <figcaption>Дарья, 18 октября 2026</figcaption>
+        </figure>
       </div>
       <p class="reviews__links"><a class="textlink" href="https://dikidi.ru/1720288" target="_blank" rel="noopener">Все отзывы на Dikidi</a><span aria-hidden="true"> · </span><a class="textlink" href="https://yandex.com/maps/org/unikalnost/156492004696/reviews/" target="_blank" rel="noopener">Отзывы на Яндекс Картах</a></p>
     </div>
